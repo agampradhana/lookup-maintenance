@@ -1,0 +1,45 @@
+<table class="table table-bordered">
+        <thead>
+          <tr>
+            <th class="col-lg-1">Action</th>
+            <th class="col-lg-2">Header Code</th>
+            <th class="col-lg-5">Description</th>
+            <th class="col-lg-1">Active Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr th:each="header : ${headers}">
+            <th scope="row">
+				<div class="btn-group btn-group-sm" role="group">
+				  <button type="button" class="btn btn-default"><i class="glyphicon glyphicon-pencil"></i></button>
+				  <button type="button" class="btn btn-default"><i class="glyphicon glyphicon-trash"></i></button>			 
+				</div>
+			</th>
+            <td th:text="${header.code}">Mark</td>
+            <td th:text="${header.description}">Otto</td>
+            <td th:text="${header.status}">@mdo</td>
+          </tr>
+          
+        </tbody>       
+      </table>
+      <nav>
+	  <ul class="pagination pull-right">
+	    <li>
+	      <a href="#" aria-label="Previous">
+	        <span aria-hidden="true">&laquo;</span>
+	      </a>
+	    </li>
+	    <li class="active"><a href="#">1</a></li>
+	    <li><a href="#">2</a></li>
+	    <li><a href="#">3</a></li>
+	    <li><a href="#">4</a></li>
+	    <li><a href="#">5</a></li>
+	    <li>
+	      <a href="#" aria-label="Next">
+	        <span aria-hidden="true">&raquo;</span>
+	      </a>
+	    </li>
+	  </ul>
+	</nav>
+      
+      
